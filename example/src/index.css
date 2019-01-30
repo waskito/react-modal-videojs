@@ -3,3 +3,12 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.container{
+  width: 720px;
+  margin: 16px auto;
+}
+
+h1{
+  text-align: center;
+}

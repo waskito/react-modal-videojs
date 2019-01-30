@@ -1,12 +1,39 @@
 import React, { Component } from 'react'
-
-import ExampleComponent from 'react-modal-videojs'
+import ModalVideo from 'react-modal-videojs'
 
 export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      src: "/on-crops.mp4",
+      poster: "/preview.png",
+      show: false
+    }
+  }
+
+  showModal = () => {
+    this.setState({ show: true });
+  }
+
+  hideModal = () => {
+    this.setState({ show: false });
+  }
+
   render () {
+    const { poster, src, show } = this.state;
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <h1>React Modal VideoJS</h1>
+        <div className="container">
+          <ModalVideo
+            playerId={ new Date() *1 }
+            src={src}
+            preview={poster}
+            show={show}
+            showModal={this.showModal}
+            handleClose={this.hideModal}
+          />
+        </div>
       </div>
     )
   }
