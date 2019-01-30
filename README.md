@@ -14,13 +14,31 @@ npm install --save react-modal-videojs
 
 ```jsx
 import React, { Component } from 'react'
+import ModalVideo from 'react-modal-videojs'
 
-import MyComponent from 'react-modal-videojs'
 
 class Example extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      poster: "http://example.com/source/poster.png",
+      source: "http://example.com/source/video.mp4",
+      show: false
+    }
+  }
+
+  showModal = () => {
+    this.setState({ show: true });
+  }
+
+  hideModal = () => {
+    this.setState({ show: false });
+  }
+
   render () {
+    const { poster, source, show, hideModal } = this.state;
     return (
-      <MyComponent />
+      <ModalVideo preview={poster} source={source} show={show} handleClose={hideModal} />
     )
   }
 }
