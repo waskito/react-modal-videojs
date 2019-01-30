@@ -135,6 +135,7 @@ class ModalVideo extends Component {
 
 ModalVideo.propTypes = {
     playerId: PropTypes.string,
+    autoplay: PropTypes.bool,
     src: PropTypes.string,
     poster: PropTypes.string,
     controls: PropTypes.bool,
