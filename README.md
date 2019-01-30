@@ -22,7 +22,7 @@ class Example extends Component {
     super(props)
     this.state = {
       poster: "http://example.com/source/poster.png",
-      source: "http://example.com/source/video.mp4",
+      src: "http://example.com/source/video.mp4",
       show: false
     }
   }
@@ -36,9 +36,15 @@ class Example extends Component {
   }
 
   render () {
-    const { poster, source, show, hideModal } = this.state;
+    const { poster, src, show} = this.state;
     return (
-      <ModalVideo preview={poster} source={source} show={show} handleClose={hideModal} />
+      <ModalVideo
+        preview={poster}
+        src={src}
+        show={show}
+        showModal={this.showModal}
+        handleClose={this.hideModal}
+      />
     )
   }
 }
