@@ -5,7 +5,7 @@ export default class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       poster: "https://raw.githubusercontent.com/waskito/react-modal-videojs/master/example/public/preview.png",
       show: false
     }
