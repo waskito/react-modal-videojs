@@ -16,13 +16,12 @@ npm install --save react-modal-videojs
 import React, { Component } from 'react'
 import ModalVideo from 'react-modal-videojs'
 
-
-class Example extends Component {
+export default class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      poster: "http://example.com/source/poster.png",
-      src: "http://example.com/source/video.mp4",
+      src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      poster: "https://raw.githubusercontent.com/waskito/react-modal-videojs/master/example/public/preview.png",
       show: false
     }
   }
@@ -36,15 +35,21 @@ class Example extends Component {
   }
 
   render () {
-    const { poster, src, show} = this.state;
+    const { poster, src, show } = this.state;
     return (
-      <ModalVideo
-        preview={poster}
-        src={src}
-        show={show}
-        showModal={this.showModal}
-        handleClose={this.hideModal}
-      />
+      <div>
+        <h1>React Modal VideoJS</h1>
+        <div className="container">
+          <ModalVideo
+            playerId={ new Date() *1 }
+            src={src}
+            preview={poster}
+            show={show}
+            showModal={this.showModal}
+            handleClose={this.hideModal}
+          />
+        </div>
+      </div>
     )
   }
 }
