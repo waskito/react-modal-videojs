@@ -10,7 +10,9 @@ const Modal = ({ handleClose, show, children }) => {
   return (
     <div className={`${styles.modal} ${showHideClassName}`}>
       <section className={styles.modalContent}>
+        <div className={styles.relativeWrapper}>
         {children}
+        </div>
         <span
           className={styles.closeButton}
           onClick={handleClose}
@@ -45,6 +47,12 @@ class ModalVideo extends Component {
                   <VideoContent {...this.props} />
                 </Modal>
                 }
+
+                <style>{`
+                .video-js .vjs-tech{
+                    position: relative;
+                }
+                `}</style>
             </div>
         )
     }

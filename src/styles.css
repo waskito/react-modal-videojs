@@ -12,12 +12,13 @@
   position:fixed;
   background: white;
   width: auto;
-  max-width: 80%;
+  max-width: 90%;
   height: auto;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
 }
+
 
 .displayBlock {
   display: block;
@@ -72,11 +73,51 @@
 
 .closeButton{
   cursor: pointer;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 2rem;
+  height: 2rem;
   position: absolute;
-  top: -1.4rem;
-  right: -1.4rem;
+  top: -2rem;
+  right: -2rem;
   color: #ffff;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-weight: lighter;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.relativeWrapper{
+  position: relative;
+}
+
+.sizeAuto{
+  width: auto;
+  height: auto;
+}
+
+.sizeAuto > video{
+  position: relative;
+}
+
+@media only screen and (max-width: 780px) {
+  .modalContent{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .closeButton{
+    right:0;
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width:1080px) {
+  .sizeAuto{
+    width: 1080px;
+  }
+}
+
+@media only screen and (min-width:  780px) and (max-width:1080px) {
+  .sizeAuto{
+    width: 780px;
+  }
 }

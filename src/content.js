@@ -101,7 +101,7 @@ class VideoContent extends Component {
 
     render() {
         return (
-          <video id={this.props.playerId} className={`video-js ${this.props.bigPlayButtonCentered? 'vjs-big-play-centered' : ''} ${this.props.className}`}></video>
+          <video id={this.props.playerId} className={`video-js ${styles.sizeAuto} ${this.props.bigPlayButtonCentered? 'vjs-big-play-centered' : ''} ${this.props.className}`}></video>
         )
     }
 }
@@ -113,6 +113,7 @@ VideoContent.propTypes = {
     controls: PropTypes.bool,
     responsive: PropTypes.bool,
     fluid: PropTypes.bool,
+    fill: PropTypes.bool,
     autoplay: PropTypes.bool,
     preload: PropTypes.oneOf(['auto', 'none', 'metadata']),
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -138,8 +139,9 @@ VideoContent.propTypes = {
 VideoContent.defaultProps = {
     src: "",
     poster: "",
-    responsive: true,
-    fluid: true,
+    responsive: false,
+    fluid: false,
+    fill: true,
     controls: true,
     autoplay: true,
     preload: 'auto',

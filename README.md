@@ -41,7 +41,7 @@ export default class App extends Component {
         <h1>React Modal VideoJS</h1>
         <div className="container">
           <ModalVideo
-            playerId={ new Date() *1 }
+            playerId={ (new Date() *1).toString() }
             src={src}
             preview={poster}
             show={show}
@@ -53,6 +53,7 @@ export default class App extends Component {
     )
   }
 }
+
 ```
 
 ## License
