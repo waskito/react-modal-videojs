@@ -131,6 +131,12 @@
   position: relative;
 }
 
+@media only screen and (max-width: 870px) {
+  .modalContent{
+    width: 748px;
+  }
+}
+
 @media only screen and (max-width: 780px) {
   .modalContent{
     width: 100%;
