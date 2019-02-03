@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/react-modal-videojs.svg)](https://www.npmjs.com/package/react-modal-videojs) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Demo
+
+Check the [Demo](https://waskito.github.io/react-modal-videojs)
+
 ## Install
 
 ```bash
