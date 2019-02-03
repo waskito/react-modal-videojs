@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import videojs from 'video.js';
 import styles from './styles.css'
 import VideoContent from './content';
 
-const Modal = ({ handleClose, show, children }) => {
+const Modal = ({ handleClose, show, children, modalBackdropClass, modalContentClass, modalCloseButtonClass }) => {
   const showHideClassName = show ? styles.displayBlock : styles.displayNone;
 
   return (
-    <div className={`${styles.modal} ${showHideClassName}`}>
-      <section className={styles.modalContent}>
+    <div className={`${styles.modal} ${showHideClassName} ${modalBackdropClass ? modalBackdropClass : ''}`}>
+      <section className={`${styles.modalContent} ${modalContentClass ? modalContentClass : ''}`}>
         <div className={styles.relativeWrapper}>
         {children}
         </div>
         <span
-          className={styles.closeButton}
+          className={`${styles.closeButton} ${modalCloseButtonClass ? modalCloseButtonClass : ''}`}
           onClick={handleClose}
         >
           ×

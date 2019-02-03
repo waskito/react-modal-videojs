@@ -1,6 +1,6 @@
 # react-modal-videojs
 
-> React VideoJS on Modal Dialog
+> React VideoJS on Modal Dialog. Based from [react-video-js](https://github.com/sylvesteraswin/react-video-js), I tweak it a bit.
 
 [![NPM](https://img.shields.io/npm/v/react-modal-videojs.svg)](https://www.npmjs.com/package/react-modal-videojs) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -59,6 +59,33 @@ export default class App extends Component {
 }
 
 ```
+
+## Props
+* `playerId`: (required) String.
+* `source`: (required) String.
+* `sourceHD`: String, default `''`.
+* `poster`: String, default `null`.
+* `responsive`: Boolean, default `false`.
+* `fluid`: Boolean, default `false`.
+* `fill`: Boolean, default `true`.
+* `skin`: String, default `default`.
+* `autoplay`: Boolean, default `true`.
+* `bigPlayButton`: Boolean, default `false` (Because `autoplay` is `true`).
+* `customSkinClass`: String, default `''`.
+* `height`: Number, default `null`.
+* `width`: Number, default `null`.
+* `loop`: Boolean, default `false`.
+* `onReady`: Functon, `callback(videoJsPlayer)`.
+* `resize`: Boolean, default `true`.
+* `options`: Boolean, default
+* `onEnded`: Function, `callback(videoJsPlayer)`.
+* `onPlay`: Function, `callback(videoJsPlayer)`.
+* `onPause`: Function, `callback(videoJsPlayer)`.
+* `debounce`: Number, default `300`.
+* `bigPlayButtonCentered`: Boolean.
+* `modalBackdropClass`: String, default `''`.
+* `modalContentClass`: String, default `''`.
+* `modalCloseButtonClass`: String, default `''`.
 
 ## License
 
