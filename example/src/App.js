@@ -5,7 +5,7 @@ export default class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      source: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       poster: "https://raw.githubusercontent.com/waskito/react-modal-videojs/master/example/public/preview.png",
       show: false
     }
@@ -20,14 +20,14 @@ export default class App extends Component {
   }
 
   render () {
-    const { poster, src, show } = this.state;
+    const { poster, source, show } = this.state;
     return (
       <div>
         <h1>React Modal VideoJS</h1>
         <div className="container">
           <ModalVideo
             playerId={ (new Date() *1).toString() }
-            src={src}
+            source={source}
             preview={poster}
             show={show}
             showModal={this.showModal}

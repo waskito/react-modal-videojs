@@ -25,7 +25,7 @@ class VideoContent extends Component {
 
     componentWillReceiveProps(nextProps){
         this.setControlVisibility(this.player, nextProps.hideControls);
-        if(this.props.src !== nextProps.src){
+        if(this.props.source !== nextProps.source){
             this.initPlayer(nextProps);
         }
     }
@@ -37,7 +37,7 @@ class VideoContent extends Component {
     initPlayer(props) {
         const playerOptions = this.generatePlayerOptions(props);
         this.player = videojs(document.querySelector(`[id='${props.playerId}']`), playerOptions);
-        this.player.src(props.src)
+        this.player.src(props.source)
         this.player.poster(props.poster)
         this.setControlVisibility(this.player, props.hideControls);
     }
@@ -108,7 +108,7 @@ class VideoContent extends Component {
 
 VideoContent.propTypes = {
     playerId: PropTypes.string,
-    src: PropTypes.string,
+    source: PropTypes.string,
     poster: PropTypes.string,
     controls: PropTypes.bool,
     responsive: PropTypes.bool,
@@ -137,7 +137,7 @@ VideoContent.propTypes = {
 }
 
 VideoContent.defaultProps = {
-    src: "",
+    source: "",
     poster: "",
     responsive: false,
     fluid: false,
