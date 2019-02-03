@@ -8,7 +8,7 @@ const Modal = ({ handleClose, show, children, modalBackdropClass, modalContentCl
 
   return (
     <div className={`${styles.modal} ${showHideClassName} ${modalBackdropClass ? modalBackdropClass : ''}`}>
-      <section className={`${styles.modalContent} ${fadeIn === false ? '' : styles.fadeId} ${modalContentClass ? modalContentClass : ''}`}>
+      <section className={`${styles.modalContent} ${fadeIn === false ? '' : styles.fadeIn} ${modalContentClass ? modalContentClass : ''}`}>
         <div className={styles.relativeWrapper}>
         {children}
         </div>
