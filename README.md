@@ -87,6 +87,7 @@ export default class App extends Component {
 * `modalContentClass`: String, default `''`.
 * `modalCloseButtonClass`: String, default `''`.
 * `fadeIn`: Boolean, default `true`.
+* `alt`: String, default `''`.
 
 ## License
 
