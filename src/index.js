@@ -3,12 +3,12 @@ import videojs from 'video.js';
 import styles from './styles.css'
 import VideoContent from './content';
 
-const Modal = ({ handleClose, show, children, modalBackdropClass, modalContentClass, modalCloseButtonClass }) => {
+const Modal = ({ handleClose, show, children, modalBackdropClass, modalContentClass, modalCloseButtonClass, fadeIn }) => {
   const showHideClassName = show ? styles.displayBlock : styles.displayNone;
 
   return (
     <div className={`${styles.modal} ${showHideClassName} ${modalBackdropClass ? modalBackdropClass : ''}`}>
-      <section className={`${styles.modalContent} ${styles.fadeIn} ${modalContentClass ? modalContentClass : ''}`}>
+      <section className={`${styles.modalContent} ${fadeIn ? styles.fadeIn : ''} ${modalContentClass ? modalContentClass : ''}`}>
         <div className={styles.relativeWrapper}>
         {children}
         </div>
