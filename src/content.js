@@ -52,7 +52,7 @@ class VideoContent extends Component {
         playerOptions.responsive = props.responsive;
         playerOptions.width = props.width;
         playerOptions.height = props.height;
-        playerOptions.bigPlayButton = props.bigPlayButton;
+        playerOptions.bigPlayButton = !props.autoplay;
         const hidePlaybackRates = props.hidePlaybackRates || props.hideControls.includes('playbackrates');
         if (!hidePlaybackRates) playerOptions.playbackRates = props.playbackRates;
         return playerOptions;
@@ -104,7 +104,7 @@ class VideoContent extends Component {
 
     render() {
         return (
-          <video id={this.props.playerId} className={`video-js ${styles.sizeAuto} ${this.props.bigPlayButtonCentered? 'vjs-big-play-centered' : ''} ${this.props.className}`}></video>
+          <video id={this.props.playerId} className={`video-js ${styles.sizeAuto} ${this.props.fluid ? styles.fluidHeight : ''} ${!this.props.autoplay? 'vjs-big-play-centered' : ''} ${this.props.className}`}></video>
         )
     }
 }

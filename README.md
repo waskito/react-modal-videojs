@@ -76,7 +76,7 @@ export default class App extends Component {
 * `sourceHD`: String, default `''`.
 * `poster`: String, default `null`.
 * `responsive`: Boolean, default `false`.
-* `fluid`: Boolean, default `false`.
+* `fluid`: Boolean, default `true`.
 * `fill`: Boolean, default `true`.
 * `skin`: String, default `default`.
 * `autoplay`: Boolean, default `true`.
