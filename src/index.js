@@ -4,12 +4,12 @@ import styles from './styles.css'
 import VideoContent from './content';
 import closeButton from './close-button.png';
 
-const Modal = ({ handleClose, show, children, modalBackdropClass, modalContentClass, modalCloseButtonClass, fadeIn }) => {
+const Modal = ({ handleClose, show, children, modalBackdropClass, modalContentClass, modalCloseButtonClass, fade }) => {
   const showHideClassName = show ? styles.displayBlock : styles.displayNone;
 
   return (
-    <div className={`${styles.modal} ${showHideClassName} ${modalBackdropClass ? modalBackdropClass : ''}`}>
-      <section className={`${styles.modalContent} ${fadeIn === false ? '' : styles.fadeIn} ${modalContentClass ? modalContentClass : ''}`}>
+    <div className={`${styles.modal} ${showHideClassName} ${modalBackdropClass ? modalBackdropClass : ''}`} onClick={handleClose}>
+      <section className={`${styles.modalContent} ${fade === false ? '' : styles.fade} ${modalContentClass ? modalContentClass : ''}`}>
         <div className={styles.relativeWrapper}>
         {children}
         </div>

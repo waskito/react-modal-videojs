@@ -47,6 +47,9 @@ class VideoContent extends Component {
         playerOptions.controls = props.controls;
         playerOptions.autoplay = props.autoplay;
         playerOptions.preload = props.preload;
+        playerOptions.fluid = props.fluid;
+        playerOptions.fill = props.fill;
+        playerOptions.responsive = props.responsive;
         playerOptions.width = props.width;
         playerOptions.height = props.height;
         playerOptions.bigPlayButton = props.bigPlayButton;
@@ -140,8 +143,8 @@ VideoContent.defaultProps = {
     source: "",
     poster: "",
     responsive: false,
-    fluid: false,
-    fill: true,
+    fluid: true,
+    fill: false,
     controls: true,
     autoplay: true,
     preload: 'auto',
