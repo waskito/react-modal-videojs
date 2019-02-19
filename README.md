@@ -61,6 +61,16 @@ export default class App extends Component {
 ```
 
 ## Props
+
+### Modal Props
+* `modalBackdropClass`: String, default `''`.
+* `modalContentClass`: String, default `''`.
+* `modalCloseButtonClass`: String, default `''`.
+* `fadeIn`: Boolean, default `true`.
+* `alt`: String, default `''`.
+* `noOuterClose`: Boolean, default `false`. (Disable close modal when click on the backdrop)
+
+### VideoJS Props
 * `playerId`: (required) String.
 * `source`: (required) String.
 * `sourceHD`: String, default `''`.
@@ -83,11 +93,6 @@ export default class App extends Component {
 * `onPause`: Function, `callback(videoJsPlayer)`.
 * `debounce`: Number, default `300`.
 * `bigPlayButtonCentered`: Boolean.
-* `modalBackdropClass`: String, default `''`.
-* `modalContentClass`: String, default `''`.
-* `modalCloseButtonClass`: String, default `''`.
-* `fadeIn`: Boolean, default `true`.
-* `alt`: String, default `''`.
 
 ## License
 
