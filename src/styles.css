@@ -139,6 +139,7 @@
 .sizeAuto{
   width: auto;
   height: auto;
+  background-color: #ffff;
 }
 
 .sizeAuto > video{
