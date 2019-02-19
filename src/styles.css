@@ -120,11 +120,16 @@
   font-weight: lighter;
   text-align: center;
   vertical-align: top;
-  background: #262626;
+  background: #ffff;
   border-radius: 50%;
   border: 2px solid #ffff;
   -webkit-box-shadow: 0 3px 4px rgba(0,0,0,0.5);
   box-shadow: 0 3px 4px rgba(0,0,0,0.5);
+}
+
+.closeButton img{
+  width: 32px;
+  height: 32px;
 }
 
 .relativeWrapper{
@@ -148,12 +153,8 @@
 
 @media only screen and (max-width: 780px) {
   .modalContent{
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .closeButton{
-    right:0;
+    width: 90%;
+    max-width: 90%;
   }
 }
 

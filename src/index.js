@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import videojs from 'video.js';
 import styles from './styles.css'
 import VideoContent from './content';
+import closeButton from './close-button.png';
 
 const Modal = ({ handleClose, show, children, modalBackdropClass, modalContentClass, modalCloseButtonClass, fadeIn }) => {
   const showHideClassName = show ? styles.displayBlock : styles.displayNone;
@@ -16,7 +17,7 @@ const Modal = ({ handleClose, show, children, modalBackdropClass, modalContentCl
           className={`${styles.closeButton} ${modalCloseButtonClass ? modalCloseButtonClass : ''}`}
           onClick={handleClose}
         >
-          ×
+          <img src={closeButton} />
         </span>
       </section>
     </div>
