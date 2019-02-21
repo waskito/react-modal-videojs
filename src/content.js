@@ -36,7 +36,7 @@ class VideoContent extends Component {
 
     initPlayer(props) {
         const playerOptions = this.generatePlayerOptions(props);
-        this.player = videojs(document.querySelector(`[id='${props.playerId}']`), playerOptions);
+        this.player = videojs(document.querySelector(`[id='${props.id}']`), playerOptions);
         this.player.src(props.source)
         this.player.poster(props.poster)
         this.setControlVisibility(this.player, props.hideControls);
@@ -104,13 +104,13 @@ class VideoContent extends Component {
 
     render() {
         return (
-          <video id={this.props.playerId} className={`video-js ${styles.sizeAuto} ${this.props.fluid ? styles.fluidHeight : ''} ${!this.props.autoplay? 'vjs-big-play-centered' : ''} ${this.props.className}`}></video>
+          <video id={this.props.id} className={`video-js ${styles.sizeAuto} ${this.props.fluid ? styles.fluidHeight : ''} ${!this.props.autoplay? 'vjs-big-play-centered' : ''} ${this.props.className}`}></video>
         )
     }
 }
 
 VideoContent.propTypes = {
-    playerId: PropTypes.string,
+    id: PropTypes.string,
     source: PropTypes.string,
     poster: PropTypes.string,
     controls: PropTypes.bool,

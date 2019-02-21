@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/react-modal-videojs.svg)](https://www.npmjs.com/package/react-modal-videojs) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## JQuery & Fancybox Alternative
+This package is `react-based (react & videojs only)`
+If you looking for `react` wrapper `react + jquer + fancybox`, use [react-videojs-fancybox](https://www.npmjs.com/package/react-videojs-fancybox) instead.
+
 ## Demo
 
 Check the [Demo](https://waskito.github.io/react-modal-videojs)
@@ -45,7 +49,7 @@ export default class App extends Component {
         <h1>React Modal VideoJS</h1>
         <div className="container">
           <ModalVideo
-            playerId={ (new Date() *1).toString() }
+            id={ (new Date() *1).toString() }
             src={src}
             preview={poster}
             show={show}
@@ -66,7 +70,7 @@ export default class App extends Component {
 * `modalBackdropClass`: String, default `''`.
 * `modalContentClass`: String, default `''`.
 * `modalCloseButtonClass`: String, default `''`.
-* `fadeIn`: Boolean, default `true`.
+* `fade`: Boolean, default `true`.
 * `alt`: String, default `''`.
 * `noOuterClose`: Boolean, default `false`. (Disable close modal when click on the backdrop)
 

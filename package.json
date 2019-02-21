@@ -1,6 +1,6 @@
 {
   "name": "react-modal-videojs",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "React VideoJS on Modal Dialog",
   "author": "waskito",
   "license": "MIT",
@@ -59,6 +59,7 @@
     "dist"
   ],
   "dependencies": {
+    "react-transition-group": "^2.5.3",
     "video.js": "^7.4.1"
   },
   "keywords": [
