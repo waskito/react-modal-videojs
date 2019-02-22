@@ -7,7 +7,7 @@
 ## JQuery & Fancybox Alternative
 This package is `react-based (react & videojs only)`.
 
-If you looking for `react` wrapper `react + jquery + fancybox`, try to use [react-videojs-fancybox](https://www.npmjs.com/package/react-videojs-fancybox) instead.
+If you are looking for `react` wrapper of `jquery + fancybox`, try to use [react-videojs-fancybox](https://www.npmjs.com/package/react-videojs-fancybox) instead.
 
 ## Demo
 
