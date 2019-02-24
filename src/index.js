@@ -41,7 +41,7 @@ class ModalVideo extends Component {
         return (
             <div>
                 <a className={styles.fakePreview} onClick={showModal}>
-                  <img src={this.props.preview} alt={this.props.alt} />
+                  <img src={this.props.poster} alt={this.props.alt} />
                   <span className={styles.playButton}></span>
                 </a>
                 {show &&

@@ -52,7 +52,7 @@ export default class App extends Component {
           <ModalVideo
             id={ (new Date() *1).toString() }
             src={src}
-            preview={poster}
+            poster={poster}
             show={show}
             showModal={this.showModal}
             handleClose={this.hideModal}
